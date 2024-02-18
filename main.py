@@ -25,7 +25,6 @@ class NBGaussian:
         self.mean = []  # Mean of each feature
 
         self.classes_ = []  # List of classes(labels)
-        self.class_count_ = None  # Number of classes(labels)
         self.class_prior_ = None  # Probability for each classes(labels)
 
     def train_data(self, X_data, y_data, target_column):
@@ -43,8 +42,6 @@ class NBGaussian:
         self.finding_classes()
         # Calculating probability for each classes
         self.class_prior_ = [list(self.target).count(i) / len(self.target) for i in self.classes_]
-        # Calculating numbers of classes
-        self.class_count_ = len(self.classes_)
         # Splitting the data by classes
         data_split = self.splitting_data()
         # Calculating Standard deviation for each classes
