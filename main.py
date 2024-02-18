@@ -40,7 +40,7 @@ class NBGaussian:
 
         # Finding classes in data
         self.finding_classes()
-        # Calculating probability for each classes
+        # Calculating probability for each class
         self.class_prior_ = [list(self.target).count(i) / len(self.target) for i in self.classes_]
         # Splitting the data by classes
         data_split = self.splitting_data()
