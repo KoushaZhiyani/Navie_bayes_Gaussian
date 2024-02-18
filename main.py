@@ -128,7 +128,7 @@ class NBGaussian:
 
 
 ################################################TEST################################################
-data = pd.read_csv("Customer_Behaviour.csv")
+data = pd.read_csv("data.csv")
 X = data.drop("Purchased", axis=1)
 y = data["Purchased"]
 
